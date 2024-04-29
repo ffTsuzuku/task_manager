@@ -1,9 +1,13 @@
+import Sidebar from './assets/components/Sidebar'
+
 function App() {
-  return (
-    <>
-      <h1 className="my-8 text-center text-5xl font-bold">Hello World</h1>
-    </>
-  );
+    return (
+        <>
+            <div className='grid grid-cols-[20%_80%]'>
+                <Sidebar />
+            </div>
+        </>
+    )
 }
 
-export default App;
+export default App
