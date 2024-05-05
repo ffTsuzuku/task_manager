@@ -31,7 +31,8 @@ const ProjectNameDialog = forwardRef(({ add_project }, ref) => {
         }
     }
 
-    return (
+    console.log(document.getElementById('add_proj'))
+    return createPortal(
         <dialog className='w-50' ref={modal_ref}>
             <div className='flex p-3 bg-slate-200 shadow-2xl'>
                 <input
@@ -51,7 +52,8 @@ const ProjectNameDialog = forwardRef(({ add_project }, ref) => {
                     <button ref={close_button_ref}>Close</button>
                 </form>
             </div>
-        </dialog>
+        </dialog>,
+        document.getElementById('modal-root')
     )
 })
 
